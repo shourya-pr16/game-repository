@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "16a46936-5ed4-4798-9e78-35ae1cf1b4ce",
+		"name": "game-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"shourya16\",\r\n  \"firstName\": \"Shourya\",\r\n  \"lastName\": \"Pratap\",\r\n  \"password\": \"mypassword\",\r\n  \"emailId\": \"shourya@dummy.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signUp",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"ntelega0\",\r\n  \"password\": \"UUfXwzHlbU\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/authenticate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userRegistration",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaG91cnlhMTYiLCJleHAiOjE2Mjk2NjQxMTcsImlhdCI6MTYyOTY1NjkxN30.Z2MPk4er-7ihBfSLD7gurSTnt8096x3yafVDKiC19sk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/registration/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"registration",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "myRegisteredGames",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJudGVsZWdhMCIsImV4cCI6MTYyOTcwOTAyMywiaWF0IjoxNjI5NzAxODIzfQ.izbhINsKJIE64TybJ71nZf1zPdeCutGddguXYB_p1ME",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/getMyRegisteredGames",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"getMyRegisteredGames"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "playGame",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaG91cnlhMTYiLCJleHAiOjE2Mjk2NjQxMTcsImlhdCI6MTYyOTY1NjkxN30.Z2MPk4er-7ihBfSLD7gurSTnt8096x3yafVDKiC19sk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/playGame/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"playGame",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "game",
+			"item": [
+				{
+					"name": "getActiveGames",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaG91cnlhMTYiLCJleHAiOjE2Mjk2NjQxMTcsImlhdCI6MTYyOTY1NjkxN30.Z2MPk4er-7ihBfSLD7gurSTnt8096x3yafVDKiC19sk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/getActiveGames",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getActiveGames"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getGameImage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/getGameImage?imageLocation=game-images/ludo.png",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getGameImage"
+							],
+							"query": [
+								{
+									"key": "imageLocation",
+									"value": "game-images/ludo.png"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upcomingGames",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJudGVsZWdhMCIsImV4cCI6MTYyOTcwOTIwNCwiaWF0IjoxNjI5NzAyMDA0fQ.Ug3uBXFgO_XxfHU97AtjO7J8nCz7hK_fTqoa4OndcKk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/getUpcomingGames",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getUpcomingGames"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

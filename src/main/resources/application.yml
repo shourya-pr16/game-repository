@@ -1,0 +1,31 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  datasource:
+    url: 'jdbc:h2:mem:test'
+    driverClassName: 'org.h2.Driver'
+    username: 'test'
+    password: 'password'
+  jpa:
+    hibernate:
+      ddl-auto: 'update'
+    properties:
+      hibernate:
+        dialect: 'org.hibernate.dialect.H2Dialect'
+
+logging:
+  level:
+    root: DEBUG
+
+firebase:
+  credentials:
+    location: './src/main/resources/service-key.json'
+  bucket:
+    name: 'game-image-url-demo.appspot.com'
+
+jwt:
+  token:
+    validity: 7200000
